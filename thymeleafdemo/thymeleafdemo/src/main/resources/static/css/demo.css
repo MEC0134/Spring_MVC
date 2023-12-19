@@ -3,7 +3,12 @@ body {
 }
 
 form {
-    margin: 50px;
+    margin: 30px;
+    width: 350px;
+}
+
+form > input, label {
+    margin: 18px;
 }
 
 .funny {

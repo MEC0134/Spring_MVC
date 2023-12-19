@@ -28,4 +28,12 @@ public class Student {
     public void setlName(String lName) {
         this.lName = lName;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "fName='" + fName + '\'' +
+                ", lName='" + lName + '\'' +
+                '}';
+    }
 }
