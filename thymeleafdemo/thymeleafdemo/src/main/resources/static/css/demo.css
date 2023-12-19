@@ -7,8 +7,12 @@ form {
     width: 350px;
 }
 
-form > input, label {
+form > input, label, select {
     margin: 18px;
+}
+
+form > input[type=radio] {
+    margin-left: 24px;
 }
 
 .funny {

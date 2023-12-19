@@ -10,10 +10,40 @@
 <h3>Student Registration Form</h3>
 
 <form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
+
     <label>First Name:</label>
     <input type="text" th:field="*{fName}">
     <label>Last Name:</label>
     <input type="text" th:field="*{lName}">
+
+    <label>Country of Origin:</label>
+
+    <select th:field="*{country}">
+
+        <option th:each="tempCountry : ${countries}" th:value="${tempCountry}" th:text="${tempCountry}" />
+
+    </select>
+
+    <br>
+
+    Favorite Language:
+    <br>
+    <input type="radio" th:field="*{favoriteLanguage}"
+                        th:each="tempLang : ${languages}"
+                        th:value="${tempLang}"
+                        th:text="${tempLang}"
+    />
+
+    <br>
+
+    Favorite Operating System:
+    <br>
+    <input type="checkbox" th:field="*{favoriteOS}" th:value="Linux">Linux</input>
+    <input type="checkbox" th:field="*{favoriteOS}" th:value=" 'Microsoft Windows' ">Microsoft Windows</input>
+    <input type="checkbox" th:field="*{favoriteOS}" th:value="MacOS">MacOS</input>
+
+    <br>
+
     <input type="submit" value="submit">
 </form>
 
