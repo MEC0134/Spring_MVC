@@ -1,0 +1,19 @@
+body {
+     background: blue;
+}
+
+form {
+    margin: 50px;
+}
+
+.funny {
+    font-size: 18px;
+    font-style: italic;
+    color: blue;
+}
+
+
+.hello-form > input {
+    display: block;
+    margin: 8px;
+}
