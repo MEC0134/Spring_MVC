@@ -4,7 +4,7 @@ body {
 
 form {
     margin: 30px;
-    width: 350px;
+    width: 75%;
 }
 
 form > input, label, select {

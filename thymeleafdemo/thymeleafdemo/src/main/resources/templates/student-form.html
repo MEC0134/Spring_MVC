@@ -12,10 +12,13 @@
 <form th:action="@{/processStudentForm}" th:object="${student}" method="POST">
 
     <label>First Name:</label>
+    <br>
     <input type="text" th:field="*{fName}">
+    <br>
     <label>Last Name:</label>
+    <br>
     <input type="text" th:field="*{lName}">
-
+    <br>
     <label>Country of Origin:</label>
 
     <select th:field="*{country}">
@@ -38,9 +41,12 @@
 
     Favorite Operating System:
     <br>
-    <input type="checkbox" th:field="*{favoriteOS}" th:value="Linux">Linux</input>
-    <input type="checkbox" th:field="*{favoriteOS}" th:value=" 'Microsoft Windows' ">Microsoft Windows</input>
-    <input type="checkbox" th:field="*{favoriteOS}" th:value="MacOS">MacOS</input>
+
+    <input type="checkbox" th:field="*{favoriteOS}"
+           th:each="tempOS: ${OperatingSystems}"
+           th:value="${tempOS}"
+           th:text="${tempOS}"
+    />
 
     <br>
 
