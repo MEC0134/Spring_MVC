@@ -5,6 +5,12 @@
     <title>Customer Confirmation</title>
 </head>
 <body>
+
     Thank you for registering <p th:text="${customer.firstName +' '+ customer.lastName}"/>
+    <br>
+    Items: <p th:text="${customer.itemAmount}"/>
+    <br>
+    Postal Code: <p th:text="${customer.postalCode}"/>
+
 </body>
 </html>

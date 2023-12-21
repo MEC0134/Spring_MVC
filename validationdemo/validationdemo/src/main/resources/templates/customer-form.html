@@ -20,10 +20,28 @@
     First Name (*): <input type="text" th:field="*{firstName}"/>
     <br><br>
     Last Name (*): <input type="text" th:field="*{lastName}"/>
-    <br><br>
-    <!-- Show error message if needed -->
+
+    <!-- Show name error messages if needed -->
     <span th:if="${#fields.hasErrors('lastName')}"
           th:errors="*{lastName}" class="error"></span>
+
+    <br>
+    <br>
+
+    Number of Items: <input type="text" th:field="*{itemAmount}"/>
+
+    <!-- Show item error messages if needed -->
+    <span th:if="${#fields.hasErrors('itemAmount')}"
+          th:errors="*{itemAmount}" class="error" ></span>
+
+    <br><br>
+    Postal Code: <input type="text" th:field="*{postalCode}"/>
+    <br><br>
+    <!-- Show postal code error messages if needed -->
+    <span th:if="${#fields.hasErrors('postalCode')}"
+          th:errors="*{postalCode}" class="error" ></span>
+
+
 
     <br><br>
     <input type="submit" value="Submit"/>
